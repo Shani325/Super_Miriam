@@ -1,0 +1,22 @@
+#include "Timer.h"
+#include "opencv2/opencv.hpp"
+#include "Config.h"
+
+
+Timer::Timer(size_t frequency_ms)
+	:_frequency_ms(frequency_ms)
+{
+}
+
+int Timer::tick()
+{
+	int key = cv::waitKey(_frequency_ms);
+
+	Notify(Event{ EventSenders::SENDER_TIMER, EventTypes::EVENT_TIMER , EventCodes::TIME_TICK });
+	if (key == KEY_ESC)
+		exit(0);
+	if (key != -1)
+		Notify(Event{ EventSenders::SENDER_KEYBOARD, EventTypes::EVENT_KEY_PRESSED , key });
+	return key;
+
+}

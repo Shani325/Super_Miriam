@@ -1,0 +1,7 @@
+﻿  pracrice_4.cpp
+C:\Users\user1\Desktop\שני\קמא-טק\C++\Project - code\SeminarMario\pracrice_4.cpp(26,70): warning C4244: 'argument': conversion from 'double' to '_Tp', possible loss of data
+          with
+          [
+              _Tp=int
+          ]
+  SeminarMario.vcxproj -> C:\Users\user1\Desktop\שני\קמא-טק\C++\Project - code\x64\Debug\SeminarMario.exe
